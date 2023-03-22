@@ -8,7 +8,7 @@ function Checklogin() {
 }
 
 function  IsLogged(){
-  const user=useSelector((state)=>state.user.value)
+  const user = useSelector((state)=>state.user.value)
   return(
     user.name?<Navigate to='/' />:<Outlet/>
   )

@@ -23,24 +23,24 @@ const persistor =persistStore(store)
 function App() {
   return (
     <BrowserRouter>
-      <Provider store={store}>
+      <Provider store = {store}>
         <PersistGate persistor={persistor}>
         <Routes>
           <Route element={<Checklogin/>}>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/user" element={<ProfilePage />} />
+          <Route path = "/" element={<Homepage />} />
+          <Route path = "/user" element={<ProfilePage />} />
           </Route>
           <Route element={<IsLogged/>}>
-          <Route path="/login" element={<Loginpage />} />
-          <Route path="/signup" element={<SignupPage />} />
+          <Route path = "/login" element={<Loginpage />} />
+          <Route path = "/signup" element={<SignupPage />} />
           </Route>
           <Route element={<Checkloginadmin/>}>
-          <Route path="/admin" element={<AdminLogin />} />
+          <Route path = "/admin" element={<AdminLogin />} />
           </Route>
           <Route element={<Adminloged/>}>
-          <Route path="/adminpanel" element={<Adminpanel />} />
-          <Route path="/adminsignup" element={<Adminsignup />} />
-          <Route path="/adminedituser" element={<EdituserPage/>}/>
+          <Route path = "/adminpanel" element={<Adminpanel />} />
+          <Route path = "/adminsignup" element={<Adminsignup />} />
+          <Route path = "/adminedituser" element={<EdituserPage/>}/>
           </Route>
         </Routes>
         </PersistGate>

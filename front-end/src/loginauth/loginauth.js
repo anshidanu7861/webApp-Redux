@@ -10,19 +10,19 @@ function Checklogin() {
 function  IsLogged(){
   const user = useSelector((state)=>state.user.value)
   return(
-    user.name?<Navigate to='/' />:<Outlet/>
+    user.name?<Navigate to = '/' />:<Outlet/>
   )
 }
 
 function Checkloginadmin(){
-  const admin=useSelector((state)=>state.admin.value)
+  const admin = useSelector((state)=>state.admin.value)
   return(
     admin.email?<Navigate to='/adminpanel'/>:<Outlet/>
   )
 }
 
 function Adminloged(){
-  const admin=useSelector((state)=>state.admin.value)
+  const admin = useSelector((state)=>state.admin.value)
   return(
     admin.email?<Outlet/>:<Navigate to='/admin'/>
   )
